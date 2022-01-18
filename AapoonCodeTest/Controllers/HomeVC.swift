@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     var weatherDataModel:WeatherModel!
     var addressCheck:String!
     var bookHistoryArray:[CityModel] = [CityModel]()
-    
+    var param = [String:Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -37,6 +37,19 @@ class HomeVC: UIViewController {
         weatherManager.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    func checkValidation(){
+        param["firstName"] = "Ram"
+        let (status,error) = RegisterViewModel.shared.txtHandler(model: Register.init(param: param))
+        if status{
+            print("validatation is done")
+        }else{
+            print("error")
+        }
+    }
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
