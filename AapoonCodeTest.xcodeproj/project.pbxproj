@@ -30,6 +30,7 @@
 		1801AE78276ADF070082C8ED /* TodayWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801AE76276ADF070082C8ED /* TodayWeatherCell.swift */; };
 		FCB39C602796574800B8C263 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB39C5F2796574800B8C263 /* Register.swift */; };
 		FCB39C62279657FC00B8C263 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB39C61279657FC00B8C263 /* RegisterViewModel.swift */; };
+		FCB39C6427965C0000B8C263 /* ArrayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB39C6327965C0000B8C263 /* ArrayDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1801AE76276ADF070082C8ED /* TodayWeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWeatherCell.swift; sourceTree = "<group>"; };
 		FCB39C5F2796574800B8C263 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FCB39C61279657FC00B8C263 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FCB39C6327965C0000B8C263 /* ArrayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				1801AE69276AD94B0082C8ED /* WeatherManager.swift */,
 				FCB39C61279657FC00B8C263 /* RegisterViewModel.swift */,
+				FCB39C6327965C0000B8C263 /* ArrayDataModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				1801AE74276ADEA70082C8ED /* HomeVC.swift in Sources */,
 				1801AE77276ADF070082C8ED /* CitysTableViewCell.swift in Sources */,
 				1801AE66276AD8EC0082C8ED /* WeatherModel.swift in Sources */,
+				FCB39C6427965C0000B8C263 /* ArrayDataModel.swift in Sources */,
 				1801AE68276AD8FD0082C8ED /* WeatherData.swift in Sources */,
 				1801AE6A276AD94B0082C8ED /* WeatherManager.swift in Sources */,
 				FCB39C62279657FC00B8C263 /* RegisterViewModel.swift in Sources */,

@@ -28,6 +28,9 @@ class HomeVC: UIViewController {
     var addressCheck:String!
     var bookHistoryArray:[CityModel] = [CityModel]()
     var param = [String:Any]()
+    lazy var featuresViewModel:ComapaniesViewModel = {
+           return ComapaniesViewModel()
+       }()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -219,3 +222,35 @@ extension UIViewController{
         }
     }
 }
+
+
+
+
+//class HomeVC {
+//// Initial page settings
+//func initializationViewModel(){
+//   
+//    featuresViewModel.getFeaturesListService()
+//    
+//    self.closureSetUp()
+//}
+//
+//// Closure initialize
+//func closureSetUp()  {
+//    print(" realod tableview count",featuresViewModel.featuresArray.count)
+//    featuresViewModel.reloadList = { [weak self] ()  in
+//        ///UI chnages in main tread
+//        DispatchQueue.main.async {
+//            self?.featuresTableView.reloadData()
+//            
+//        }
+//    }
+//    featuresViewModel.errorMessage = { [weak self] (message)  in
+//        DispatchQueue.main.async {
+//            print(message)
+//            self?.showToast(message: message)
+//           
+//        }
+//    }
+//}
+//}
