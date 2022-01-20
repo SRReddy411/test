@@ -28,7 +28,7 @@ class MapsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        submitBtn.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.black, radius: 2.0, opacity: 0.35)
         
         self.navigationItem.title = "Search location"
         // Ask for Authorisation from the User.

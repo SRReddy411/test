@@ -37,3 +37,46 @@ extension UIViewController{
     ProgressDialog.alert.dismiss(animated: true, completion: nil)
   }
 }
+
+
+extension UIView {
+    
+    
+    
+    func makeRoundedAndShadowed(view: UIView) {
+        view.layer.cornerRadius = 20
+        view.layer.masksToBounds = true
+
+        view.layer.shadowColor = UIColor.darkGray.cgColor
+        view.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+    }
+    
+    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
+            layer.masksToBounds = false
+            layer.shadowOffset = offset
+            layer.shadowColor = color.cgColor
+            layer.shadowRadius = radius
+            layer.shadowOpacity = opacity
+
+            let backgroundCGColor = backgroundColor?.cgColor
+            backgroundColor = nil
+            layer.backgroundColor =  backgroundCGColor
+        }
+    
+    
+    
+    func addDashedBorder() {
+        //Create a CAShapeLayer
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 2
+        // passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment
+        shapeLayer.lineDashPattern = [2,3]
+
+        let path = CGMutablePath()
+        path.addLines(between: [CGPoint(x: 0, y: 0),
+                                CGPoint(x: self.frame.width, y: 0)])
+        shapeLayer.path = path
+        layer.addSublayer(shapeLayer)
+    }
+}
