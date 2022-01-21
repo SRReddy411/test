@@ -41,7 +41,17 @@ extension UIViewController{
 
 extension UIView {
     
-    
+    func shadowSetUp() {
+            layer.masksToBounds = false
+            clipsToBounds = false
+            layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowOpacity = 0.10
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+            layer.shadowRadius = 10.0
+            //layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+            //layer.shouldRasterize = true
+           // layer.rasterizationScale = UIScreen.main.scale
+        }
     
     func makeRoundedAndShadowed(view: UIView) {
         view.layer.cornerRadius = 20
